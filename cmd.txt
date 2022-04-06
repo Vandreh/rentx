@@ -1,0 +1,771 @@
+Consumindo API:
+https://app.rocketseat.com.br/node/consumindo-api/group/criacao-das-interfaces/lesson/app-que-vamos-codar
+
+https://www.figma.com/file/4ojyGi2mGuQaGK0sUHMAqB/RentX-Ignite?node-id=0%3A1
+
+
+
+
+
+
+
+
+
+GitHub de colegas:
+    https://github.com/thallysfs/gofinances-react-native
+    https://github.com/avellar2/rentex/blob/main/src/screens/CarDetails/styles.ts#L5
+    https://github.com/AndreCosta101/rentx
+    https://github.com/andrelinos/rentx
+    https://github.com/GabrielDevss/rentx_app
+    https://github.com/lubnimorais/rentx-mobile
+    https://github.com/MarcusPOliveira/rentx
+    https://github.com/wagnersk/projeto3-ignite-rentx
+    https://github.com/andrelinos/rentx
+    https://github.com/luciodevjob/Rentx
+    https://github.com/luciodevjob/Rentx/blob/main/src/components/Calendar/generateInterval.ts#L13
+    https://github.com/JohnMendes/rentx/blob/main/src/components/Calendar/index.tsx#L23
+    https://github.com/JohnMendes/rentx
+    https://github.com/andrelinos/rentx/blob/main/src/screens/Scheduling/index.tsx#L121
+    https://github.com/Aszurar/Ignite/tree/master/react_native/Chapter_2/gofinances
+    https://github.com/antoniovuono/rentxmobile
+    https://github.com/pablolucio97/rentx/blob/master/src/screens/Scheduling/index.tsx#L39
+    https://github.com/pablolucio97/rentx
+    https://github.com/rockske8er/mobile_rentx
+    https://github.com/rockske8er/mobile_rentx/blob/main/src/screens/Scheduling/index.tsx#L79
+    https://github.com/rockske8er/mobile_rentx/blob/main/src/screens/Scheduling/index.tsx#L83
+    https://github.com/LucasLuisBorges/App-RentX
+    https://github.com/andrelinos?tab=repositories
+    https://github.com/giibrait/Rentx/tree/master
+    https://github.com/joaovictorcamargo/Login-Twitch
+
+
+
+
+
+
+
+
+
+
+
+yarn add styled-components
+yarn add @types/styled-components-react-native -D
+
+
+expo google fonts:
+https://docs.expo.dev/guides/using-custom-fonts/
+expo install expo-font @expo-google-fonts/inter @expo-google-fonts/archivo
+
+expo install expo-app-loading
+
+
+
+https://drive.google.com/file/d/1aw0T2FSaWd5wlGl5W9GBVO6zKXCriBhT/view?usp=sharing
+
+
+https://docs.expo.dev/versions/latest/sdk/svg/
+expo install react-native-svg
+
+https://github.com/kristerkari/react-native-svg-transformer
+yarn add --dev react-native-svg-transformer
+
+yarn add react-native-responsive-fontsize
+
+
+
+yarn add react-native-iphone-x-helper
+
+
+https://www.npmjs.com/package/react-native-calendars
+https://github.com/wix/react-native-calendars
+yarn add react-native-calendars
+
+nao rodei este código: erro de tipagem somente no codigo do professor:
+https://app.rocketseat.com.br/node/consumindo-api/group/criacao-das-interfaces/lesson/componente-de-calendario
+    yarn add @types/react-native-calendars -D
+
+
+
+
+
+
+
+https://whimsical.com/heuristicas-de-nielsen-para-o-design-de-interface-4jpx8xw2ixmMFMEPQWdzao
+
+
+
+
+
+https://app.rocketseat.com.br/node/consumindo-api/group/criacao-das-interfaces/lesson/interface-de-agendamento-concluido
+Diferença de { Dimensions } e { useWindowDimensions } from 'react-native';
+    Dimensions = usa em Styled-Components.
+    useWindowDimensions = usa useWindowDimensions ( hook ) em componentes React ( funções ).
+    
+
+
+
+
+
+
+
+
+
+
+https://app.rocketseat.com.br/node/consumindo-api/group/criacao-das-interfaces/lesson/interface-de-agendamento-concluido
+https://app.rocketseat.com.br/h/forum/react-native/398f295c-9524-47ff-ab64-078f38687bda
+Interface deforma
+Aula em: Consumindo API › Criação das Interfaces › Interface de Agendamento Concluído
+Usando as estilizações da aula, a interface deformou, o Message não aparecia, o ConfirmButton sobrepunhava o Message e o Title. Tive que corrigir as proporções colocando na metade do que a aula indicava, aí não deformou nem no 6S e nem no J5(os aparelhos que uso pra teste).
+
+Fico pensando se não há maneiras menos arriscadas de trabalhar com essas proporções, usar pixel não é arriscado demais dependendo do tamanho da tela? Implementar a interface com Flexbox usando outras medidas, não seria mais viável pra garantir a responsividade da tela?
+
+COMENTAR
+RESPONDER
+Melhor Resposta
+
+Votos
+
+Data
+Matheus de Nadai
+Matheus de Nadai
+31/12/21 às 12:46 | Editado em 31/03/2022
+Olá @Thiago Santos, tenho plena convicção que é arriscado usar pixels para tamanhos de componente, fonts, etc. Por tenho usado a biblioteca react-native-responsive-screen que transforma os tamanhos em porcentagem. Segue o link da biblioteca: https://www.npmjs.com/package/react-native-responsive-screen
+Basicamente é uma biblioteca que fornece 2 métodos simples para que os desenvolvedores do React Native possam codificar seus elementos de IU totalmente responsivos. Nenhuma consulta de mídia necessária.
+Ele também fornece um terceiro método opcional para detecção de orientação de tela e renderização automática de acordo com novas dimensões.
+
+No link que forneci mostra toda a capacidade da biblioteca, e digo com propriedade pois a maioria dos aplicativos que estão na loja que produzi, estão com seu uso e deixa muito bem adaptado para ios, android e os diferentes tamanhos de tela, além do seu uso ser extremamente facil.
+
+Espero ter ajudado 🚀
+
+(4) COMENTAR
+Thiago Santos
+02/01/22 às 21:34
+RESPONDER
+
+Muito obrigado Matheus, vou utilizar, tenho alguns testes de entrevista pra fazer, e estava com esse receio de fazer a interface e acabar quebrando na hora que o recrutador fosse analisar. Valeu cara, salvou.
+
+Wesley Lima
+03/01/22 às 23:42 | Editado em 03/01/2022
+RESPONDER
+
+Obrigado pela dica amigo, ajudou muito. Meu projeto agora é outro. No emulador do Android ficava uma coisa, no meu telefone com DPI maior ficava muito ruim, agora está padrão os dois.
+
+CARREGAR MAIS COMENTÁRIOS
+Todas as respostas
+Página 1 de página 1
+
+Matheus de Nadai
+Matheus de Nadai
+31/12/21 às 12:46 | Editado em 31/03/2022
+Olá @Thiago Santos, tenho plena convicção que é arriscado usar pixels para tamanhos de componente, fonts, etc. Por tenho usado a biblioteca react-native-responsive-screen que transforma os tamanhos em porcentagem. Segue o link da biblioteca: https://www.npmjs.com/package/react-native-responsive-screen
+Basicamente é uma biblioteca que fornece 2 métodos simples para que os desenvolvedores do React Native possam codificar seus elementos de IU totalmente responsivos. Nenhuma consulta de mídia necessária.
+Ele também fornece um terceiro método opcional para detecção de orientação de tela e renderização automática de acordo com novas dimensões.
+
+No link que forneci mostra toda a capacidade da biblioteca, e digo com propriedade pois a maioria dos aplicativos que estão na loja que produzi, estão com seu uso e deixa muito bem adaptado para ios, android e os diferentes tamanhos de tela, além do seu uso ser extremamente facil.
+
+Espero ter ajudado 🚀
+
+(4) COMENTAR
+Thiago Santos
+02/01/22 às 21:34
+RESPONDER
+
+Muito obrigado Matheus, vou utilizar, tenho alguns testes de entrevista pra fazer, e estava com esse receio de fazer a interface e acabar quebrando na hora que o recrutador fosse analisar. Valeu cara, salvou.
+
+Wesley Lima
+03/01/22 às 23:42 | Editado em 03/01/2022
+RESPONDER
+
+Obrigado pela dica amigo, ajudou muito. Meu projeto agora é outro. No emulador do Android ficava uma coisa, no meu telefone com DPI maior ficava muito ruim, agora está padrão os dois.
+
+CARREGAR MAIS COMENTÁRIOS
+Michel John
+Michel John
+18/02/22 às 18:48 | Editado em 20/02/2022
+Resolvi assim, dividi o 100% da tela entre essas três View's dentro do container e os Text's:
+<S.Container>
+   <S.WrapperLogo>
+     // Conteúdo do WrapperLogo
+   </S.WrapperLogo>
+   <S.Content>
+     // Conteúdo do content
+   </S.Content>
+   <S.Footer>
+     // Conteúdo do footer
+   </S.Footer>
+</S.Container>
+export const Container = styled.View`
+  flex: 1;
+  ...
+`;
+export const Content = styled.View`
+  position: absolute;
+  top: 45%;
+  ...
+`;
+export const WrapperLogo = styled.View`
+  position: absolute;
+  top: 5%;
+`;
+export const Title = styled.Text`
+  margin-top: 30px;
+  ...
+`;
+export const Message = styled.Text`
+  margin-top: 15px;
+  ...
+`;
+export const Footer = styled.View`
+  bottom: 5%;
+  position: absolute;
+  ...
+`;
+
+
+https://www.npmjs.com/package/react-native-responsive-screen
+
+
+
+
+
+
+
+
+Diferenças entre TabNavigator e StackNavigator 
+TabNavigator = acrescenta na parte inferior do App uma barra fixa de menu
+StackNavigator = não tem o menu inferior e utiliza a logica de pilhas de livros, em que o primeiro a entrar é o ultimo a sair e o ultimo a entrar é o primeiro a sair.
+
+
+
+
+
+reactnavigation.org/docs/getting-started/
+yarn add @react-navigation/native
+expo install react-native-screens react-native-safe-area-context
+
+
+https://reactnavigation.org/docs/hello-react-navigation
+yarn add @react-navigation/native-stack
+
+    codigo do professor: yarn add @react-navigation/stack (nao foi inserido)
+
+
+
+
+
+
+
+
+
+gitHub do tutor ViniFraga:
+https://github.com/vinifraga/ignite/blob/master/reactnative/v1/rentx/src/components/Button/index.tsx
+gitHub do tutor JoaoGabriel:
+https://github.com/joaogabriel-sg/rentx-app/tree/main/src/routes
+
+github dos colegas:
+https://github.com/giibrait/Rentx/tree/master
+
+
+https://github.com/react-navigation/react-navigation/issues/9820
+https://reactnavigation.org/docs/upgrading-from-5.x/#ability-to-specify-a-type-for-root-navigator-when-using-typescript
+
+
+https://reactnavigation.org/docs/navigating/#navigating-to-a-new-screen
+https://reactnavigation.org/docs/navigation-prop/#navigate
+
+https://snack.expo.dev/@vinifraga/react-navigation-v6
+https://reactnavigation.org/docs/typescript/
+https://reactnavigation.org/docs/navigating/
+https://reactnavigation.org/docs/upgrading-from-5.x/
+
+
+
+
+
+
+
+
+
+
+
+
+
+Instalação do React Navigation Stack ou Native Stack
+Aula em: Consumindo API › Criação das Interfaces › Implementando a Navegação
+Boa noite pessoal.
+
+Podemos perceber que no site do React Navigation
+
+image.png
+
+Ele fala pra instalar yarn add @react-navigation/native-stack
+
+Ao invés de yarn add @react-navigation/stack
+
+Qual eu devo instalar visto que no native-stack os nomes das funções exportadas todos tem native no meio?
+
+Obrigado pela ajuda 💜.
+
+PS: Por enquanto eu instalei o stack sem native.
+
+COMENTAR
+RESPONDER
+Melhor Resposta
+
+Votos
+
+Data
+Rennan Oliveira
+Rennan Oliveira
+31/08/21 às 08:42 | Editado em 31/08/2021
+Fala @Daniel Vinicius Siqueira Viana, beleza? Dando uma olhada aqui na documentação, vi que a principal diferença é que como o próprio nome sugere ela usa exclusivamente o controlador de navegação navito de cada SO (Android/IOS).
+
+Nesse caso o uso dela seria interessante quando você não precisa fazer nenhum tipo de costumização na navegação de pilha, como estilos do cabeçalho, ou a animação na passagem de uma tela para outra.
+
+Nesse caso a @react-navigation/stack, tem a ponte nativa entre o javascript e o SO, que permite que ele seja totalmente customizado conforme as opções que a lib lhe sugere.
+
+(2) COMENTAR
+Daniel Vinicius Siqueira Viana
+31/08/21 às 16:06
+RESPONDER
+
+Então usa a stack mesmo?
+
+Rennan Oliveira
+31/08/21 às 16:11
+RESPONDER
+
+@Daniel Vinicius Siqueira Viana Isso mesmo, pode usar o @react-navigation/stack.
+
+Todas as respostas
+Página 1 de página 1
+
+Rennan Oliveira
+Rennan Oliveira
+31/08/21 às 08:42 | Editado em 31/08/2021
+Fala @Daniel Vinicius Siqueira Viana, beleza? Dando uma olhada aqui na documentação, vi que a principal diferença é que como o próprio nome sugere ela usa exclusivamente o controlador de navegação navito de cada SO (Android/IOS).
+
+Nesse caso o uso dela seria interessante quando você não precisa fazer nenhum tipo de costumização na navegação de pilha, como estilos do cabeçalho, ou a animação na passagem de uma tela para outra.
+
+Nesse caso a @react-navigation/stack, tem a ponte nativa entre o javascript e o SO, que permite que ele seja totalmente customizado conforme as opções que a lib lhe sugere.
+
+(2) COMENTAR
+Daniel Vinicius Siqueira Viana
+31/08/21 às 16:06
+RESPONDER
+
+Então usa a stack mesmo?
+
+Rennan Oliveira
+31/08/21 às 16:11
+RESPONDER
+
+@Daniel Vinicius Siqueira Viana Isso mesmo, pode usar o @react-navigation/stack.
+
+
+
+
+
+
+
+
+
+[v6] useNavigation navigate.
+Aula em: Consumindo API › Criação das Interfaces › Implementando a Navegação
+Por questão de informação ao usar a v6, temos um erro de tipagem por parte da lib, navigation.navigate(‘ex’),
+
+https://github.com/react-navigation/react-navigation/issues/9820
+
+o problema já foi relatado.
+
+(2) COMENTAR
+RESPONDER
+Andre Costa
+29/10/21 às 20:22
+RESPONDER
+
+É só colocar o tipo: <any> . const navigation = useNavigation<any>( ); Funciona direitinho, sem prejuízo.
+
+Lucas De Lima Martins De Souza
+05/12/21 às 18:09
+RESPONDER
+
+@Andre Costa Opa valeu Andre, eu tava procurando meios de se resolver isso, e ajudou mt aí tbm
+
+Melhor Resposta
+
+Votos
+
+Data
+Vinícius Fraga Modesto
+
+Rocketseat
+Vinícius Fraga Modesto
+23/08/21 às 11:23 | Editado em 24/03/2022
+Fala @Gabriel Marques Frahm, beleza? Temos outros tópicos relatando essas alterações, sugiro dar uma olhada nesse aqui
+
+https://app.rocketseat.com.br/h/forum/react-native/c11cfcfb-4f07-42bb-9b85-1101867f3dff?sort_by=date#c7276586-8324-424f-b557-a5d083a27351
+
+Um ajuste legal naquela resposta seria estendar a tipagem do RootParamList de forma global:
+https://reactnavigation.org/docs/upgrading-from-5.x/#ability-to-specify-a-type-for-root-navigator-when-using-typescript
+
+Espero ter ajudado 💜
+
+COMENTAR
+Todas as respostas
+Página 1 de página 1
+
+Vinícius Fraga Modesto
+
+Rocketseat
+Vinícius Fraga Modesto
+23/08/21 às 11:23 | Editado em 24/03/2022
+Fala @Gabriel Marques Frahm, beleza? Temos outros tópicos relatando essas alterações, sugiro dar uma olhada nesse aqui
+
+https://app.rocketseat.com.br/h/forum/react-native/c11cfcfb-4f07-42bb-9b85-1101867f3dff?sort_by=date#c7276586-8324-424f-b557-a5d083a27351
+
+Um ajuste legal naquela resposta seria estendar a tipagem do RootParamList de forma global:
+https://reactnavigation.org/docs/upgrading-from-5.x/#ability-to-specify-a-type-for-root-navigator-when-using-typescript
+
+Espero ter ajudado 💜
+
+COMENTAR
+Glaulher Ramalho Medeiros
+Glaulher Ramalho Medeiros
+06/02/22 às 17:37 | Editado em 21/02/2022
+olá eu criei a pasta:
+@types/@react-navigation/stack/index.d.ts
+
+e coloquei as linhas abaixo:
+declare namespace ReactNavigation {
+  export interface RootParamList extends RootStackParamList {
+    Home: NavigationStackProp<string>;
+    CarDetails: NavigationStackProp<string>;
+    Scheduling: NavigationStackProp<string>;
+    SchedulingDetails: NavigationStackProp<string>;
+    SchedulingComplete: NavigationStackProp<string>;
+  }
+}
+COMENTAR
+Fernando Jose Martins Heusi Da Silva
+Fernando Jose Martins Heusi Da Silva
+10/10/21 às 11:07 | Editado em 03/01/2022
+Eu resolvi assim:
+import {NativeStackScreenProps} from '@react-navigation/native-stack'
+
+type Props = NativeStackScreenProps<any,'Home'>;
+
+export function Home({navigation}:Props){
+  function handleCarDetails (){
+    navigation.navigate('CarDetails');
+  }  
+  
+  return(
+   [...] 
+  )
+}
+COMENTAR
+Lucas Luis Borges
+Lucas Luis Borges
+08/03/22 às 10:17
+Tenta assim
+
+Screenshot_1.jpg
+
+
+
+
+
+
+
+
+Header nao esta funcionando.
+Aula em: Consumindo API › Criação das Interfaces › Implementando a Navegação
+o headermode= none nao esta mais funcionando e me retorna um erro: headermode= none ' is deprecated. use 'headershown false' in 'screenoptions' instead
+Porem quando uso o headershown: false, nao funciona.
+
+image.png
+
+image.png
+
+O que fazer?
+
+codigo no github: https://github.com/giibrait/Rentx/tree/master
+
+COMENTAR
+RESPONDER
+Melhor Resposta
+
+Votos
+
+Data
+João Gabriel Silva Gomes
+João Gabriel Silva Gomes
+20/01/22 às 16:07 | Editado em 28/02/2022
+Opa @Willian Passarelli, como vai?
+
+Verifiquei que você está utilizando a versão 6 do React Navigation e nela a forma de colocar o headerShown mudou e agora precisa ser screenOptions={{ headerShown: false }}, conforme você pode ver no meu repo nessa linha:
+https://github.com/joaogabriel-sg/rentx-app/blob/main/src/routes/stack.routes.tsx#L18
+
+Espero ter ajudado 
+(1) COMENTAR
+Willian Passarelli
+20/01/22 às 16:18
+RESPONDER
+
+Obrigada!! ajudou sim
+
+Todas as respostas
+Página 1 de página 1
+
+João Gabriel Silva Gomes
+João Gabriel Silva Gomes
+20/01/22 às 16:07 | Editado em 28/02/2022
+Opa @Willian Passarelli, como vai?
+
+Verifiquei que você está utilizando a versão 6 do React Navigation e nela a forma de colocar o headerShown mudou e agora precisa ser screenOptions={{ headerShown: false }}, conforme você pode ver no meu repo nessa linha:
+https://github.com/joaogabriel-sg/rentx-app/blob/main/src/routes/stack.routes.tsx#L18
+
+Espero ter ajudado 
+(1) COMENTAR
+Willian Passarelli
+20/01/22 às 16:18
+RESPONDER
+
+Obrigada!! ajudou sim
+
+
+
+
+
+
+
+
+Extends RectButtonProps
+Aula em: Consumindo API › Criação das Interfaces › Implementando a Navegação
+Uma dúvida provavelmente besta.
+
+Eu percebi que o professor criou dois componentes (Button e ConfirmButton) e os dois tem o export const Container = styled(RectButton) no styles.ts .
+Só que no index.tsx, um tem interface Props extends RectButtonProps e o outro faz apenas interface Props. Não entendi porque um extende a RectButtonProps e o outro não.
+
+Outra dúvida. Eu extender RectButtonProps, por exemplo; mas utilizar somente uma propriedade tem impacto negativo em performance?
+
+COMENTAR
+RESPONDER
+Melhor Resposta
+
+Votos
+
+Data
+Vinícius Fraga Modesto
+
+Rocketseat
+Vinícius Fraga Modesto
+23/07/21 às 12:02 | Editado em 25/10/2021
+Fala @Rafael Santos Bertuzzi, realmente ocorreu uma leve confusão do Rodrigo nessa parte e, no componente Button, ele acabou precisando adicionar manualmente a prop onPress por não ter colocado o extends RectButtonProps no index.tsx, só no styles.ts. Se quiser dar uma olhada no meu código, eu dei uma otimizada nessa parte:
+https://github.com/vinifraga/ignite/blob/master/reactnative/v1/rentx/src/components/Button/index.tsx
+
+Espero ter ajudado 💜
+
+COMENTAR
+Todas as respostas
+Página 1 de página 1
+
+Vinícius Fraga Modesto
+
+Rocketseat
+Vinícius Fraga Modesto
+23/07/21 às 12:02 | Editado em 25/10/2021
+Fala @Rafael Santos Bertuzzi, realmente ocorreu uma leve confusão do Rodrigo nessa parte e, no componente Button, ele acabou precisando adicionar manualmente a prop onPress por não ter colocado o extends RectButtonProps no index.tsx, só no styles.ts. Se quiser dar uma olhada no meu código, eu dei uma otimizada nessa parte:
+https://github.com/vinifraga/ignite/blob/master/reactnative/v1/rentx/src/components/Button/index.tsx
+
+Espero ter ajudado 💜
+
+COMENTAR
+Rennan Oliveira
+Rennan Oliveira
+23/07/21 às 10:46 | Editado em 23/07/2021
+Fala @Rafael Santos Bertuzzi, beleza?
+
+Bom vamos lá, não lembro exatamente quais são esses componentes mas provavelmente seja o seguinte:
+No que ele usa o interface Props extends RectButtonProps, provavelmente é um componentes reutilizável, onde em algum lugar da aplicação formos ter acesso a ele, vamos precisar ter acesso as propriedades do mesmo
+
+No caso que ele não usa é porque é somente um componente estilizado de uma tela ou componente.
+
+Espero que tenha ficado claro 🙂
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://drive.google.com/file/d/1oIx6NRAqSkp6rczQ02sQ0cGCD2Xjkvig/view?usp=sharing
+https://drive.google.com/file/d/1oIx6NRAqSkp6rczQ02sQ0cGCD2Xjkvig/view
+
+
+https://www.npmjs.com/package/json-server
+sudo npm install -g json-server
+json-server ./src/services/server.json
+json-server ./src/services/server.json --host SEU_IP --port 3333 --delay 700
+
+
+
+
+
+
+
+https://react-native.rocketseat.dev/erros/android-ios/#error-network-error
+
+https://react-native.rocketseat.dev/
+
+
+https://app.rocketseat.com.br/h/forum/react-native/b6321b77-0f1b-4fc2-aba2-764b51a1b324?sort_by=date
+
+
+
+yarn add axios
+
+yarn api
+expo start
+
+
+https://app.rocketseat.com.br/h/forum/react-native/2e3cdf35-8ef7-4ad2-8774-c6f7bf4dcf07
+
+yarn add date-fns
+
+
+https://reactnavigation.org/blog/2021/08/14/react-navigation-6.0/#better-type-safety
+
+
+https://reactnavigation.org/docs/typescript/#type-checking-the-navigator
+https://reactnavigation.org/docs/navigation-prop/#dispatch
+https://reactnavigation.org/blog/2021/08/14/react-navigation-6.0/#better-type-safety
+
+
+
+
+
+
+
+https://oblador.github.io/react-native-vector-icons/
+
+
+
+
+
+
+
+
+
+
+Datecallback Handler
+Aula em: Consumindo API › Consumindo API › Finalizando o botão
+estou com problema na tipagem do Datecallback Handler, ja olhei todos os topicos dos foruns e nao consigo seguir na aprendizagem sem ajuda.
+
+image.png
+
+link do repositorio: https://github.com/giibrait/Rentx/tree/master
+
+COMENTAR
+RESPONDER
+Melhor Resposta
+
+Votos
+
+Data
+Antonio Sampaio De Vuono
+Antonio Sampaio De Vuono
+21/01/22 às 13:43 | Editado em 21/01/2022
+Ou se quiser apenas que o erro suma tente:
+Passar date: any ver se some.
+
+   function handleChangeDate(date: any) {
+        console.log(date);
+        let start = !lastSelectedDate.timeStamp ? date : lastSelectedDate;
+        let end = date;
+
+        if (start.timeStamp > end.timeStamp) {
+            start = end;
+            end = start;
+        }
+        setLastSelectedDate(end);
+        const interval = generateInterval(start, end);
+
+    }
+COMENTAR
+Todas as respostas
+Página 1 de página 1
+
+Antonio Sampaio De Vuono
+Antonio Sampaio De Vuono
+21/01/22 às 13:43 | Editado em 21/01/2022
+Ou se quiser apenas que o erro suma tente:
+Passar date: any ver se some.
+
+   function handleChangeDate(date: any) {
+        console.log(date);
+        let start = !lastSelectedDate.timeStamp ? date : lastSelectedDate;
+        let end = date;
+
+        if (start.timeStamp > end.timeStamp) {
+            start = end;
+            end = start;
+        }
+        setLastSelectedDate(end);
+        const interval = generateInterval(start, end);
+
+    }
+COMENTAR
+Antonio Sampaio De Vuono
+Antonio Sampaio De Vuono
+21/01/22 às 12:19
+Fala @Willian Passarelli, beleza ?
+
+Dei uma olhada no seu código e vou tentar te ajudar...
+
+Dentro do seu componente Calendar tenta adicionar o ano dessa forma:
+interface DayProps {
+    dateString: string;
+    day: number;
+    month: number;
+    year: number;
+    timestamp: number;
+}
+Se nāo resolver de noite eu tento buildar seu projeto e ver o que pode ser.
+
+Abraços e bons estudos
+
+(1) COMENTAR
+Willian Passarelli
+21/01/22 às 13:25
+RESPONDER
+
+@Antonio Sampaio De Vuono Oi!
+Tentei fazer o que voce disse, mas nao deu certo. Ele esta com problema de tipagem por conta da nova versao do React Native Calendars, porem ainda nao consegui achar uma solucao
+
+
+
+
+
+para testes, colocar seu IP no lugar indicado (SEU_IP):
+nos arquivos:
+package.json:
+"scripts": {
+    ...
+    "api": "json-server ./src/services/server.json --host SEU_IP --port 3333 --delay 700"
+
+e no arquivo:
+src/services/api.ts:
+  baseURL: 'http://SEU_IP:3333'
+
+
+no terminal digitar:
+yarn api
+expo start
